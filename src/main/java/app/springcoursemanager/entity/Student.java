@@ -1,4 +1,4 @@
-package entity;
+package app.springcoursemanager.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -21,12 +21,15 @@ public class Student {
             generator = "student_sequence"
     )
     private Long studentId;
-    private String student_name;
-    private String student_address;
+    private String name;
+    private String surename;
     @Embedded
     private Seat seat;
+    /*
     @OneToOne(
             mappedBy = "student"
     )
     private  Notebook notebook;
+
+     */
 }
