@@ -1,5 +1,6 @@
 package app.springcoursemanager.repository;
 
+import app.springcoursemanager.entity.Notebook;
 import app.springcoursemanager.entity.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,4 +63,5 @@ public class StudentRepositoryTest {
         System.out.println("studentList = " + studentList);
         assert true;
     }
+
 }

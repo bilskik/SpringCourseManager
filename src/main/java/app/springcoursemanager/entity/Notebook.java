@@ -2,14 +2,12 @@ package app.springcoursemanager.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Table
-@Data
+@Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,14 +24,9 @@ public class Notebook {
     )
     private Long notebookId;
     private String notebookColor;
+
     @OneToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            optional = false
-    )
-    @JoinColumn(
-            name = "course_id",
-            referencedColumnName = "studentId"
+            mappedBy = "notebook"
     )
     private Student student;
 }

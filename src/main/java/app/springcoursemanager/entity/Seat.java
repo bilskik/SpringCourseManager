@@ -26,8 +26,6 @@ import lombok.NoArgsConstructor;
         )
 }
 )
-
-
 public class Seat {
 
     private Integer seatNumber;
